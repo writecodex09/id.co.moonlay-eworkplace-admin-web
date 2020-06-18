@@ -160,6 +160,13 @@ export default {
         },
       ],
     },
+    //Menu baru remburstment
+    {
+      name: 'Remburstment',
+      url: '#',
+      icon: 'icon-cursor',
+    },
+    //akhir menu baru
     {
       name: 'Approval',
       url: '/absensi/approval',
