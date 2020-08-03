@@ -161,11 +161,16 @@ export default {
       ],
     },
     //Menu baru remburstment
-    {
-      name: 'Remburstment',
-      url: '#',
-      icon: 'icon-cursor',
-    },
+     {
+          name: 'Reimbursement',
+          url: '/remburstment/dashboard',
+          icon: 'icon-cursor',
+          badge: {
+            variant: 'info',
+            text: 'NEW',
+          },
+     },
+
     //akhir menu baru
     {
       name: 'Approval',

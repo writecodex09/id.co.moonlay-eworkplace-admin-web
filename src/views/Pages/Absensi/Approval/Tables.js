@@ -112,7 +112,7 @@ class Tables extends Component {
           loading: true,
         });
       })
-     
+
       .catch(err => {
         console.log(err);
       });
@@ -128,7 +128,7 @@ class Tables extends Component {
         Authorization : `Bearer ` + localStorage.getItem('token'),
         // 'Content-Type' : 'application/json-patch+json'
       };
-  
+
       axios({
         method: 'get',
         url: this.state.url + '/' + AbsensiId,
@@ -179,7 +179,7 @@ class Tables extends Component {
       "CompanyName": this.state.CompanyName,
       "ClientName": this.state.ClientName,
     }
-  
+
     axios({
       method: 'put',
       url: this.state.url + '/' + this.state.idAbsensi,
@@ -191,7 +191,7 @@ class Tables extends Component {
         alert('berhasil diubah');
         window.location.reload();
       })
-     
+
       .catch(err => {
         console.log(err);
       });
@@ -219,7 +219,7 @@ class Tables extends Component {
       "CompanyName": this.state.CompanyName,
       "ClientName": this.state.ClientName,
     }
-  
+
     axios({
       method: 'put',
       url: this.state.url + '/' + this.state.idAbsensi,
@@ -231,7 +231,7 @@ class Tables extends Component {
         alert('berhasil diubah');
         window.location.reload();
       })
-     
+
       .catch(err => {
         console.log(err);
       });
@@ -317,7 +317,7 @@ class Tables extends Component {
     // 'startDate' and 'endDate' which are Momentjs objects.
   };
   render() {
-  
+
     const { results, currentPage, resultsPerPage } = this.state;
     const indexOfLastTodo = currentPage * resultsPerPage;
     const indexOfFirstTodo = indexOfLastTodo - resultsPerPage;
@@ -342,7 +342,7 @@ class Tables extends Component {
           {/* <td>{Math.abs(new Date(post.checkIn) - new Date(post.checkOut))/3600000}</td> */}
           <td>{results.State}</td>
           <td>{results.Location}</td>
-          
+
           <td>
             {results.State === 'Sick Leave' ? 'Sick Leave' : (results.CheckOut === '0001-01-01T00:00:00'
               ? 'Haven\'t Checked Out Yet'
@@ -423,11 +423,11 @@ class Tables extends Component {
       </center>
       </Modal.Body>
       <Modal.Footer>
-      
+
       <Button className="btn btn-info" onClick={this.handleClose}>
 							Close
       </Button>
-			
+
       <Button className="btn btn-success" onClick={this.handleDecline}>
 							Decline
       </Button>
@@ -444,16 +444,18 @@ class Tables extends Component {
       </center>
       </Modal.Body>
       <Modal.Footer>
-      
+
       <Button className="btn btn-info" onClick={this.handleClose}>
 							Close
       </Button>
-			
+
       <Button className="btn btn-success" onClick={this.handleApproved}>
 							Approved
       </Button>
       </Modal.Footer>
       </Modal>
+      <h1>
+      </h1>
 
       <div className="row">
           {/* <div class="col-md-3">
